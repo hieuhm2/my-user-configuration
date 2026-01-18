@@ -68,3 +68,6 @@ sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo
 sudo apt update
 sudo apt install ibus-bamboo
 ibus restart
+
+# install md-cli
+npm install -g markdownlint-cli
