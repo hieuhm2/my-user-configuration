@@ -74,3 +74,7 @@ npm install -g markdownlint-cli
 
 # temp
 sudo apt install mplayer mplayer-gui mpv
+
+
+# copyq
+sudo apt install copyq
