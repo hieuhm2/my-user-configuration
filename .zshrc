@@ -128,6 +128,7 @@ alias ze='/zserver/lib/zshort/common/ZShortEngine'
 
 # Middleware
 alias znm='/zserver/lib/zshort/mw/ZShortNotificationMW'
+alias zcm='/zserver/lib/zshort/mw/ZShortChannelMW/'
 
 # Service
 alias zis='/zserver/lib/zshort/service/ZShortInternalService'
@@ -137,7 +138,11 @@ alias zw='/zserver/lib/zshort/worker'
 alias zwca='/zserver/lib/zshort/worker/ZShortCreatorAchievementWorker'
 alias zwn='/zserver/lib/zshort/worker/ZShortNotificationWorker'
 alias zwo='/zserver/lib/zshort/worker/ZShortOutAppNotificationWorker'
-alias zws='/zserver/lib/zshort/worker/ZShortSyncToZiDbWorker'
+alias zs2zidb='/zserver/lib/zshort/worker/ZShortSyncToZidbWorker'
+alias zs2sql='/zserver/lib/zshort/worker/ZShortSyncSqlWorker/'
+
+# Thrift
+alias zthrift='/zserver/lib/zshort/common/ZShortCommonLib/thrift/zshort'
 
 alias zls='alias | grep "^z"'
 alias ij='intellij-idea-ultimate'
@@ -150,3 +155,22 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.npm-global/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/lap16759/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/lap16759/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/lap16759/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/lap16759/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# PAEA - start all services + ngrok + webhook
+alias paea="cd ~/PAEA && bash scripts/start.sh && cd"
